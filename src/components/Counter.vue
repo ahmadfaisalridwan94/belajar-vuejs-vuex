@@ -24,6 +24,9 @@
                                 <font-awesome-icon icon="fa-solid fa-plus-square" />
                             </button>
                         </div>
+                        <div class="d-grid gap-2 mt-2">
+                            <button v-on:click="addRandomNumber" class="btn btn-warning">Add Random</button>
+                        </div>
                     </div>
                 </div>
 
@@ -36,7 +39,7 @@
 
 <script>
 
-import {mapState, mapMutations} from 'vuex'
+import {mapState, mapMutations, mapActions} from 'vuex'
 import History from './History.vue'
 
 export default{
@@ -52,7 +55,8 @@ export default{
         ...mapState(['counter'])
     },
     methods: {
-        ...mapMutations(["addCounter", "subtractCounter"])
+        ...mapMutations(["addCounter", "subtractCounter"]),
+        ...mapActions(["addRandomNumber"])
     },
 }
 
