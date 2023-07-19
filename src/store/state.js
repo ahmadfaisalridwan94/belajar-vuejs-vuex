@@ -1,4 +1,5 @@
 export default{
     counter: 0,
-    value: 0
+    history: [],
+    numberSearch: 0,
 }

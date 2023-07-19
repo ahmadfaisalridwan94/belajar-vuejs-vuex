@@ -29,14 +29,20 @@
 
             </div>
         </div>
+
+        <History/>
     </div>
 </template>
 
 <script>
 
 import {mapState, mapMutations} from 'vuex'
+import History from './History.vue'
 
 export default{
+    components:{
+        History
+    },
     data() {
         return {
             value: 1,

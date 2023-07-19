@@ -8,7 +8,9 @@ const store = createStore({
     state,
     actions,
     mutations,
-    getters,
+    getters: {
+        activeIndexes: getters.activeIndexes
+    },
 })
 
 export default store;
